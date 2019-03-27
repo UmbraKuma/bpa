@@ -3,8 +3,8 @@
 
 public class BPAPerson
 {
-	private String districtName, street, city, phone, participantName, individualEvent, teamEvent, generalEvent;
-	private double teacher, student, chaperone, riverWalkA, riverWalkB, fiestaTexas, torchAwardLuncheon, totalRegistration;
+	private String districtName, street, city, phone, participantName, participant, individualEvent, teamEvent, generalEvent;
+	private double riverWalkA, riverWalkB, fiestaTexas, torchAwardLuncheon, totalRegistration;
 
 	BPAPerson()			                         	// Constructor (default)
 	{
@@ -13,9 +13,7 @@ public class BPAPerson
 		city = " ";
 		phone = " ";
 		participantName = " ";
-		teacher = 0;
-		student = 0;
-		chaperone = 0;
+		participant = " ";
 		individualEvent = " ";
 		teamEvent = " ";
 		generalEvent = " ";
@@ -25,16 +23,14 @@ public class BPAPerson
 		torchAwardLuncheon = 0;
 		totalRegistration = 0;
 	}
-	BPAPerson(String dn, String str, String cit, String p, String pn, double t, double stu, double cha, String ie, String te, String ge, double a, double b, double ft, double tal, double tr)                 //Constructor
+	BPAPerson(String dn, String str, String cit, String p, String pn, String par, String ie, String te, String ge, double a, double b, double ft, double tal, double tr)                 //Constructor
 	{
 		districtName = dn;
 		street = str;
 		city = cit;
 		phone = p;
 		participantName = pn;
-		teacher = t;
-		student = stu;
-		chaperone = cha;
+		participant = par;
 		individualEvent = ie;
 		teamEvent = te;
 		generalEvent = ge;
@@ -50,9 +46,7 @@ public String getStreet()                 {return street;}
 public String getCity()                   {return city;}
 public String getPhone()                  {return phone;}
 public String getParticipantName()        {return participantName;}
-public double getTeacher()                {return teacher;}
-public double getStudent()                {return student;}
-public double getChaperone()              {return chaperone;}
+public String getParticipant()            {return participant;}
 public String getIndividualEvent()        {return individualEvent;}
 public String getTeamEvent()              {return teamEvent;}
 public String getGeneralEvent()           {return generalEvent;}
@@ -67,9 +61,7 @@ public void setStreet(String str)                {str = street;}
 public void setCity(String cit)                  {cit = city;}
 public void setPhone(String p)                 {p = phone;}
 public void setParticipantName(String pn)      {pn = participantName;}
-public void setTeacher(double t)               {t = teacher;}
-public void setStudent(double stu)               {stu = student;}
-public void setChaperone(double cha)             {cha = chaperone;}
+public void setParticipant(String par)               {par = particiapnt;}
 public void setIndividualEvent(String ie)      {ie = individualEvent;}
 public void setTeamEvent(String te)            {te = teamEvent;}
 public void setGeneralEvent(String ge)         {ge = generalEvent;}
@@ -81,8 +73,7 @@ public void setTotalRegistration(double tr)    {tr = totalRegistration;}
 
 public String toString()
 {
-	return "FirstName: " + getDistrictName() + "Street: " + getStreet() + "City"+ getCity() + "Phone" + getPhone() + "Participant Name" +getParticipantName()+ "Teacher: "+getTeacher() + "Student: " +getStudent() + "Chaperone: "+
-		getChaperone() + "Individual Event: " + getIndividualEvent() + "Team Event" + getTeamEvent() +"General Event: " + getGeneralEvent() + "River Walk A" + getRiverWalkA() + "River Walk B" + getRiverWalkB() + "FiestaTexas: " +
+	return "FirstName: " + getDistrictName() + "Street: " + getStreet() + "City"+ getCity() + "Phone" + getPhone() + "Participant Name" +getParticipantName()+ "Participant Type" + getParticipant() + "Individual Event: " + getIndividualEvent() + "Team Event" + getTeamEvent() +"General Event: " + getGeneralEvent() + "River Walk A" + getRiverWalkA() + "River Walk B" + getRiverWalkB() + "FiestaTexas: " +
 			getFiestaTexas() + "Torch Award Luncheon" + getTorchAwardLuncheon() + "Total Registration" + getTotalRegistration();
 }
 
